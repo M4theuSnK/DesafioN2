@@ -1,0 +1,32 @@
+Esta atividade vale 50% da N1
+Ela pode ser feita sozinho ou em duplas
+Se feita em duplas, os dois devem encaminhar um único link e demonstrar que ambos participaram (diferentes commits)
+Enviar o link do GitHub com código para atender à atividade
+Desafio proposto abaixo
+Avalie a lista de requisitos abaixo:
+
+•O vendedor cadastra produtos e pedidos
+•O vendedor não pode cadastrar funcionários, mas o gerente pode.
+•O gerente também cadastra produtos e pedidos.
+•Vendedor e gerente cadastram clientes.
+•Ao cadastrar qualquer tipo de informação, uma mensagem de auditoria deverá ser enviada para o Sistema de Controle de Segurança.
+•Ao finalizar o cadastro de um pedido, é possível realizar a sua impressão.
+Como resolver isso?
+•Organizar a ideia
+  Você fez isso em Linguagem de Programação I, certo?
+
+•Organizar o código em camadas.
+
+  Isso também foi feito, tenho certeza!
+
+•Primeira interface gráfica da aplicação?
+
+  Console, Um dia certamente você vai fazer código para Linux!
+
+•Primeiro armazenamento dos dados?
+
+  Arquivo, pela mesma razão.
+
+•O quanto vamos evoluir esse código no futuro?
+
+  Só depende de você!

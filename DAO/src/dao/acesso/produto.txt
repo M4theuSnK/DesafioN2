@@ -1,0 +1,5 @@
+doces;bolacha;6.0;
+Doce;Picole;2.0;
+comida;Amendoim;2.05;
+Meia;roupa;4.09;
+Garrafa;pote;9.09;

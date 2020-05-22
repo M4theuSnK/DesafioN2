@@ -1,0 +1,3 @@
+Cleo Pires;Alfredo;3;bala;doce;picole;
+Rei Leonidas;Administrador;5;Espada;Escudo;Bota;Capacete;Elmo;
+roberto;Administrador;2;roberto;macedo;
