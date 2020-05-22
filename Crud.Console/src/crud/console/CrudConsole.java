@@ -13,6 +13,7 @@ import comuns.enums.TipoRepositorio;
 import java.time.Instant;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import simulacaodesafiothreads.GerenciadorAuditoria;
 /**
  *
  * @author 082170017 082120032
@@ -27,19 +28,13 @@ public class CrudConsole {
         Config.getInstance().setDatabase(TipoRepositorio.TEXTO);
         estadoConsole = EnumEstado.Inicio.getEstadoMaquina();
         Boolean saida = false;
-        try {	
-            System.out.printf("%s - Início da Execução de Thread com interface Runnable!\n", 	
-                    Instant.now().toString());	
-            Thread.sleep(1000);	
-            
-        } catch (InterruptedException ex) {	
-            Logger.getLogger(ThreadSampleClass.class.getName()).log(	
-                    Level.SEVERE, null, ex);	
-        }    
+        GerenciadorAuditoria.getInstancia().ativar();
+        
         while (!saida){
+            GerenciadorAuditoria.getInstancia().desativar();
             saida = estadoConsole.Executa();
+            
         }
-        System.out.printf("%s - Fim da Execução da Thread com interface Runnable!\n", 
-                    Instant.now().toString());
+        
     }   
 }

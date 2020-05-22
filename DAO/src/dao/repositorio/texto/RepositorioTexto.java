@@ -31,7 +31,11 @@ public class RepositorioTexto extends Repositorio {
     @Override
     public void deleta(int id, EntidadesDisponiveis tipoEntidade) {
         DAO dao = FabricaDAOs.Fabrica(tipoEntidade, TipoRepositorio.TEXTO);
-        dao.deleta(id , tipoEntidade);
+        try {
+            dao.deleta(id , tipoEntidade);
+        } catch (IOException ex) {
+            Logger.getLogger(RepositorioTexto.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     @Override

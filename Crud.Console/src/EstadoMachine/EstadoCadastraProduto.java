@@ -10,6 +10,8 @@ import crud.console.CrudConsole;
 import java.util.Scanner;
 import business.crud.Crud;
 import comuns.enums.EntidadesDisponiveis;
+import java.time.Instant;
+import simulacaodesafiothreads.GerenciadorAuditoria;
 /**
  *
  * @author Administrador
@@ -30,7 +32,12 @@ public class EstadoCadastraProduto extends EstadoMachine{
 
             Crud crud = new Crud();
             crud.Insere(produto, EntidadesDisponiveis.PRODUTO);
-
+            
+            
+            GerenciadorAuditoria.getInstancia().adicionaMsgAuditoria("Dados Cadastrados \nNome do Produto: " + produto.getDescricao()+ "\nCategoria: " + produto.getCategoria()+ "\nValor: " + produto.getValor());
+            Thread.sleep(2000);
+            
+            System.out.printf("%s - Final do reporte de mensagens\n", Instant.now().toString());
             CrudConsole.estadoConsole = EnumEstado.MenuFuncionario.getEstadoMaquina();
         }
         catch(Exception e){

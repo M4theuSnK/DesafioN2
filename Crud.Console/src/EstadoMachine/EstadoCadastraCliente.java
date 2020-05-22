@@ -10,6 +10,8 @@ import comuns.enums.EntidadesDisponiveis;
 import java.util.Scanner;
 import comuns.vos.Cliente;
 import crud.console.CrudConsole;
+import java.time.Instant;
+import simulacaodesafiothreads.GerenciadorAuditoria;
 /**
  *
  * @author 082170031
@@ -31,7 +33,10 @@ public class EstadoCadastraCliente extends EstadoMachine{
 
             Crud crud = new Crud();
             crud.Insere(cliente, EntidadesDisponiveis.CLIENTE);
-
+            GerenciadorAuditoria.getInstancia().adicionaMsgAuditoria("Dados Cadastrados \nNome do Cliente: " + cliente.getNome() + "\nTelefone: " + cliente.getTelefone() + "\nEndereço: " + cliente.getEndereço());
+            Thread.sleep(2000);
+            System.out.printf("%s - Final do reporte de mensagens\n", Instant.now().toString());
+            
             CrudConsole.estadoConsole = EnumEstado.MenuFuncionario.getEstadoMaquina();
         }
         catch(Exception e){

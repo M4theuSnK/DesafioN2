@@ -9,6 +9,8 @@ import java.util.Scanner;
 import business.crud.Crud;
 import comuns.enums.EntidadesDisponiveis;
 import comuns.vos.Funcionario;
+import java.time.Instant;
+import simulacaodesafiothreads.GerenciadorAuditoria;
 /**
  *
  * @author 082170017
@@ -32,7 +34,10 @@ public class EstadoCadastraFuncionario extends EstadoMachine{
 
             Crud crud = new Crud();
             crud.Insere(func, EntidadesDisponiveis.FUNCIONARIO);
-
+            GerenciadorAuditoria.getInstancia().adicionaMsgAuditoria("Dados Cadastrados \nNome do Funcionário: " + func.getNome() + "\nUsername: " + func.getUsername() + "\nSenha: " + func.getSenha() + "\nTipo de Acesso: " + func.getAcesso());
+            Thread.sleep(2000);
+            
+            System.out.printf("%s - Final do reporte de mensagens\n", Instant.now().toString());
             CrudConsole.estadoConsole = EnumEstado.MenuGerente.getEstadoMaquina();
         }
         catch(Exception e){

@@ -10,7 +10,9 @@ import business.crud.Crud;
 import comuns.enums.EntidadesDisponiveis;
 import comuns.vos.Pedido;
 import crud.console.CrudConsole;
+import java.time.Instant;
 import java.util.Scanner;
+import simulacaodesafiothreads.GerenciadorAuditoria;
 /**
  *
  * @author 082170017
@@ -35,7 +37,10 @@ public class EstadoCadastraPedido extends EstadoMachine{
             }
             pedido.setProdutos(produtos);
             pedido.setVendedor(Config.getInstance().getUsuarioLogado().getNome());
-
+            GerenciadorAuditoria.getInstancia().adicionaMsgAuditoria("Dados Cadastrados \nNome do Cliente: " + pedido.getClienteNome()+ "\nQuantidade de Produtos: " + pedido.getQtdProdutos()+ "\nProduto: " + pedido.getProdutos());
+            Thread.sleep(2000);
+            
+            System.out.printf("%s - Final do reporte de mensagens\n", Instant.now().toString());   
             Crud crud = new Crud();        
             crud.Insere(pedido, EntidadesDisponiveis.PEDIDO);
 
