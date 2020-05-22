@@ -7,7 +7,7 @@ package EstadoMachine;
 
 /**
  *
- * @author joao-
+ * @author joao
  */
 public enum EnumEstado {
     Inicio (new EstadoInicio()),
