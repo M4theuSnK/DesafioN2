@@ -10,9 +10,6 @@ import business.config.Config;
 import EstadoMachine.EstadoMachine;
 import EstadoMachine.EnumEstado;
 import comuns.enums.TipoRepositorio;
-import java.time.Instant;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import simulacaodesafiothreads.GerenciadorAuditoria;
 /**
  *

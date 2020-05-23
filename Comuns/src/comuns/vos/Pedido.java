@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package comuns.vos;
-import java.util.Calendar;
 import comuns.crud.basis.Entidade;
 /**
  *

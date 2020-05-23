@@ -6,7 +6,6 @@
 package dao.repositorio.basis;
 import comuns.crud.basis.Entidade;
 import comuns.enums.EntidadesDisponiveis;
-import java.io.IOException;
 /**
  *
  * @author vitorlupinetti

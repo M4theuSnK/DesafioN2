@@ -6,7 +6,6 @@
 package simulacaodesafiothreads;
 
 import java.util.LinkedList;
-import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 

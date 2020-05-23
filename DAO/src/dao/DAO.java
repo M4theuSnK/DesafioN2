@@ -6,7 +6,6 @@
 package dao;
 
 import java.sql.SQLException;
-import java.util.ArrayList;
 import comuns.crud.basis.Entidade;
 import comuns.enums.EntidadesDisponiveis;
 import java.io.IOException;

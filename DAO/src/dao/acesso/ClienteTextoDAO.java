@@ -10,7 +10,6 @@ import comuns.enums.EntidadesDisponiveis;
 import dao.DAO;
 import java.sql.SQLException;
 import comuns.vos.Cliente;
-import static dao.acesso.ProdutoTextoDAO.path;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
