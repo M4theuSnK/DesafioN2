@@ -26,7 +26,6 @@ public class ThreadGestaoMensagensAuditoria extends Thread {
                 if (msg != null) {
                     enviaMensagemParaSistemaAuditoria(msg);
                 }
-                Thread.sleep(1);
             } catch (InterruptedException ex) {
                 Logger.getLogger(ThreadGestaoMensagensAuditoria.class.getName()).log(Level.SEVERE, null, ex);
             }
